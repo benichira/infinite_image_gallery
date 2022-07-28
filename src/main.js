@@ -16,11 +16,14 @@ buttons.forEach(button => {
                 xAxisPosition -= imgWidth;
                 // translateX += 500;
                 carouselImg.style.transform = `translateX(${xAxisPosition}px)`
+                // carouselImg.style.transition = "transform 0.25s";
+
             } else if (imgIndex === numOfImg) {
                 imgIndex = 1
                 xAxisPosition = 0;
                 // translateX = 0;
                 carouselImg.style.transform = `translateX(${xAxisPosition}px)`
+                // carouselImg.style.transition = "transform 0s";
             }
 
         } else if (event.target.id === 'previous') {
