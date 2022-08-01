@@ -12,13 +12,13 @@ buttons.forEach(button => {
                 imgIndex++;
                 xAxisPosition -= imgWidth;
                 carouselImg.style.transform = `translateX(${xAxisPosition}px)`
-                carouselImg.style.transition = "transform 0.25s";
+                // carouselImg.style.transition = "transform 0.25s";
 
             } else if (imgIndex === numOfImg) {
                 imgIndex = 1
                 xAxisPosition = 0;
                 carouselImg.style.transform = `translateX(${xAxisPosition}px)`
-                carouselImg.style.transition = "none";
+                // carouselImg.style.transition = "none";
             }
 
         } else if (event.target.id === 'previous') {
@@ -35,16 +35,16 @@ buttons.forEach(button => {
     })
 })
 
-carouselImg.addEventListener('transitionend', (e) => {
-    // if imgIndex is second last, take the first image and append it to last
-    console.log(e)
-    if (imgIndex === numOfImg) {
-        carouselImg.style.transition = "none";
-        imgIndex = numOfImg;
-        xAxisPosition = 0;
-        carouselImg.style.transform = `translateX(${xAxisPosition}px)`
-    }
-})
+// carouselImg.addEventListener('transitionend', (e) => {
+//     if imgIndex is second last, take the first image and append it to last
+//     console.log(e)
+//     if (imgIndex === numOfImg) {
+//         carouselImg.style.transition = "none";
+//         imgIndex = numOfImg;
+//         xAxisPosition = 0;
+//         carouselImg.style.transform = `translateX(${xAxisPosition}px)`
+//     }
+// })
 
 
 
